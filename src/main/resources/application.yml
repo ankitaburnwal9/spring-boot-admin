@@ -1,0 +1,39 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: TransformersAdmin
+  security:
+    user:
+      name: admin
+      password: admin
+  #mail:
+  #  host: smtp.gmail.com
+  #  port: 587
+  #  protocol: smtp
+  #  username: aburnwal@gmail.com
+   # password: pkmepszddsqlpdyq
+   # test-connection: false
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+  boot:
+    admin:
+      #client:
+      #  instance:
+      #    name: Transformers Admin
+      ui:
+        title: Transformers
+      notify:
+        mail:
+          enabled: true
+          to: aburnwal@gmail.com
+          from: Spring Boot Admin<noreply@gmail.com>
+          ignore-changes:
+            - ''
+
